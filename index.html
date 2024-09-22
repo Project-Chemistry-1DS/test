@@ -15,11 +15,21 @@
             height: 100%;
             overflow: hidden;
             background-color: #006400; /* Verde Escuro */
+            display: flex;
+            flex-direction: column;
         }
         model-viewer {
             width: 100vw;
-            height: 100vh;
+            height: calc(100vh - 30px); /* Ajustado para acomodar o rodapé */
             display: block;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -31,7 +41,10 @@
         auto-rotate
         camera-controls
         camera-orbit="90deg 55deg 2.5m"
-        style="width: 100%; height: 100vh; background-color: #006400;">
+        style="background-color: #006400;">
     </model-viewer>
+    <footer>
+        Modelo 3D e página feita por Enrico Fedel
+    </footer>
 </body>
 </html>
