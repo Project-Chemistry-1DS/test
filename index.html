@@ -31,9 +31,34 @@
             font-family: Arial, sans-serif;
             font-size: 14px;
         }
+        .botao-voltar {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #90EE90; /* Verde claro */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
+        }
+        .botao-voltar:hover {
+            background-color: #7CFC00; /* Verde mais claro ao passar o mouse */
+        }
+        .botao-voltar::before {
+            content: '←';
+            color: #006400;
+            font-size: 24px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
+    <a href="https://project-chemistry-1ds.github.io/intro/" class="botao-voltar" title="Voltar"></a>
     <!-- Modelo 3D com controles de câmera e rotação automática -->
     <model-viewer
         src="./nuclear.glb"
