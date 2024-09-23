@@ -37,7 +37,7 @@
             left: 20px;
             width: 50px;
             height: 50px;
-            background-color: #1c1c1c; /* Verde claro */
+            background-color: #006400; /* Verde */
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -45,29 +45,30 @@
             text-decoration: none;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
             transition: background-color 0.3s, transform 0.3s;
+            z-index: 1000; /* Garante que o botão fique acima do modelo 3D */
         }
         .botao-voltar:hover {
-            background-color: #c0a080; /* Verde mais claro ao passar o mouse */
+            background-color: #008000; /* Verde mais claro ao passar o mouse */
             transform: scale(1.1);
         }
         .botao-voltar::before {
             content: '←';
-            color: #006400;
+            color: white;
             font-size: 24px;
             font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <a href="https://project-chemistry-1ds.github.io/intro/" class="botao-voltar" title="Voltar"></a>
     <!-- Modelo 3D com controles de câmera e rotação automática -->
     <model-viewer
         src="./nuclear.glb"
-        alt="Modelo 3D de exemplo"
+        alt="Modelo 3D"
         auto-rotate
         camera-controls
         camera-orbit="90deg 55deg 2.5m"
         style="background-color: #1c1c1c;">
+        <a href="https://netheriosa.github.io/intro/" class="botao-voltar" title="Voltar"></a>
     </model-viewer>
     <footer>
         Modelo 3D e página feita por Enrico Fedel
